@@ -98,7 +98,6 @@ class MemoTripActivity : AppCompatActivity() {
                 e.printStackTrace()
             }
         } else {
-            // Demander la permission si elle n'est pas accordée
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
@@ -121,7 +120,7 @@ class MemoTripActivity : AppCompatActivity() {
             initializeContent()
             requestLocationUpdates()
         } else {
-            // Handle the case where permissions are not granted
+
         }
     }
 }
@@ -160,7 +159,7 @@ fun MemoTripApp(locationList: List<Location>) {
 
             Spacer(modifier = Modifier.height(16.dp))
             Button(onClick = {
-                // Logic to add the note to the user's journey entry
+
             }) {
                 Text("Ajouter Note")
             }
@@ -172,7 +171,7 @@ fun MemoTripApp(locationList: List<Location>) {
                 properties = mapProperties,
                 cameraPositionState = cameraPositionState,
                 onMapClick = { _ ->
-                    // Logic to add markers or save locations
+
                 }
             ) {
                 locationList.forEach { location ->
@@ -232,7 +231,7 @@ fun AddPhotoScreen() {
                     }
 
                     override fun onError(exception: ImageCaptureException) {
-                        // Handle error
+
                     }
                 }
             )
